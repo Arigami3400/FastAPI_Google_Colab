@@ -31,7 +31,7 @@ def check_diabet():
             answer = requests.post(api_ulr, json=diabet_data, timeout=10)
             if answer.status_code == 200:
                 result = answer.json()
-                st.success(f'Результат: {result.get("predict")}')
+                st.success(f'Результат: {result.get("Predict")}')
             else:
                 st.error(f'Ошибка: {answer.status_code}')
         except requests.exceptions.RequestException:

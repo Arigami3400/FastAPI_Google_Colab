@@ -3,7 +3,7 @@ import requests
 
 def check_house():
     st.title("Предсказание цены дома")
-    api_url = "http://127.0.0.6:8000/predict_house"
+    api_url = "http://127.0.0.1:8000/predict_house"
 
     GrLivArea = st.number_input("Жилая площадь", min_value=0, value=1, step=2)
     YearBuilt = st.number_input("Год постройки", min_value=1900, max_value=2026, step=1)

@@ -3,8 +3,8 @@ from colab_app.db.schema import HousePredictSchema
 import joblib
 
 
-scaler = joblib.load('scaler_house.pkl')
-model = joblib.load('model_house.pkl')
+scaler = joblib.load('colab_app/scaler_model/scaler_house.pkl')
+model = joblib.load('colab_app/scaler_model/model_house.pkl')
 
 
 house_router = APIRouter(prefix='/predict_house', tags=['/predict_house'])

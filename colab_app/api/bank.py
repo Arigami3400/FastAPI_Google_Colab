@@ -2,8 +2,8 @@ from fastapi import APIRouter
 from colab_app.db.schema import BankPredict1Schema
 import joblib
 
-scaler = joblib.load('scaler_bank.pkl')
-model = joblib.load('model_bank.pkl')
+scaler = joblib.load('colab_app/scaler_model/scaler_bank.pkl')
+model = joblib.load('colab_app/scaler_model/model_bank.pkl')
 
 bank_router = APIRouter(prefix='/predict_bank', tags=['predict_bank'])
 

@@ -2,8 +2,8 @@ from fastapi import APIRouter
 from colab_app.db.schema import *
 import joblib
 
-model = joblib.load('model_stu.pkl')
-scaler = joblib.load('scaler_stu.pkl')
+model = joblib.load('colab_app/scaler_model/model_stu.pkl')
+scaler = joblib.load('colab_app/scaler_model/scaler_stu.pkl')
 
 
 student_router = APIRouter(prefix='/predict_student', tags=['/predict_student'])

@@ -2,14 +2,14 @@ from fastapi import APIRouter
 from colab_app.db.schema import AvocadoSchema
 import joblib
 
-model = joblib.load('model_ava.pkl')
-scaler = joblib.load('scaler_ava.pkl')
+model = joblib.load('colab_app/scaler_model/model_ava.pkl')
+scaler = joblib.load('colab_app/scaler_model/scaler_ava.pkl')
 
 avacado_router = APIRouter(prefix='/predict_avocado', tags=['/predict_avocado'])
 
 
 
-@avacado_router.post('/predict')
+@avacado_router.post('/')
 async def predict(avocado: AvocadoSchema):
     avocado_dict = avocado.dict()
 

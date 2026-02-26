@@ -5,8 +5,8 @@ import joblib
 
 telecom_router = APIRouter(prefix='/predict_telecom', tags=['/predict_telecom'])
 
-scaler = joblib.load('scaler_tele.pkl')
-model = joblib.load('model_tele.pkl')
+scaler = joblib.load('colab_app/scaler_model/scaler_tele.pkl')
+model = joblib.load('colab_app/scaler_model/model_tele.pkl')
 
 
 Paymentmethod_list = ['Credit_card_automatic', 'Electronic_check', 'Mailed_check']
@@ -14,7 +14,7 @@ Contract_list = ['One_year', 'Two_year']
 InternetService_list = ['Fiber_optic', 'No']
 MultipleLines_list = ['No_phone_service', 'Yes']
 
-@telecom_router.post('/predict')
+@telecom_router.post('/')
 async def predict(telecom: TelecomSchema):
     tel_dict = telecom.dict()
     new_pay = tel_dict.pop('PaymentMethod')

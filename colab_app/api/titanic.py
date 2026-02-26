@@ -4,12 +4,12 @@ from colab_app.db.schema import TitanicSchema
 from pydantic import BaseModel
 titanic_router = APIRouter(prefix='/predict_titanic', tags=['/predict_titanic'])
 
-model = joblib.load('model_tita.pkl')
-scaler = joblib.load('scaler_tita.pkl')
+model = joblib.load('colab_app/scaler_model/model_tita.pkl')
+scaler = joblib.load('colab_app/scaler_model/scaler_tita.pkl')
 
 
 
-@titanic_router.post('/predict')
+@titanic_router.post('/')
 async def predict(titanic: TitanicSchema):
     titanic_dict = titanic.dict()
 

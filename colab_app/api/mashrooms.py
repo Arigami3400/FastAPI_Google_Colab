@@ -4,8 +4,8 @@ import joblib
 
 
 
-model = joblib.load('model_mash.pkl')
-scaler = joblib.load('scaler_mash.pkl')
+model = joblib.load('colab_app/scaler_model/model_mash.pkl')
+scaler = joblib.load('colab_app/scaler_model/scaler_mash.pkl')
 
 mashrooms_router = APIRouter(prefix='/predict_mashrooms', tags=['/predict_mashrooms'])
 
