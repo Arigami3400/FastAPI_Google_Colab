@@ -2,7 +2,7 @@ from fastapi import APIRouter
 import joblib
 from colab_app.db.schema import DiabetSchema
 
-diabet_router = APIRouter(prefix='/predict_diabet', tags=['/predict_diabet'])
+diabet_router = APIRouter(prefix='/predict_diabet', tags=['Diabetes'])
 
 model = joblib.load('colab_app/scaler_model/model_dia.pkl')
 scaler = joblib.load('colab_app/scaler_model/scaler_dia.pkl')

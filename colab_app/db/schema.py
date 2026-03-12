@@ -112,3 +112,36 @@ class StudentSchema(BaseModel):
     parental_level: str
     lunch: str
     test: str
+
+class DSHremployeSchema(BaseModel):
+    age: int
+    business_travel: str
+    daily_rate: int
+    department: str
+    distance_from_home: int
+    education: int
+    education_field: str
+    environment_satisfaction: int
+    gender: str
+    hourly_rate: int
+    job_involvement: int
+    job_level: int
+    job_role: str
+    job_satisfaction: int
+    marital_status: str
+    monthly_income: int
+    monthly_rate: int
+    num_companies_worked: int
+    over_time: str
+    percent_salary_hike: int
+    performance_rating: int
+    relationship_satisfaction: int
+    stockoption_level: int
+    total_working_years: int
+    training_times_lastyear: int
+    work_life_balance: int
+    years_atcompany: int
+    years_incurrent_role: int
+    years_since_lastpromotion: int
+    years_with_currmanager: int
+

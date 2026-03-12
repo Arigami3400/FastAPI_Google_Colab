@@ -13,10 +13,11 @@ from colab_app.front.front_mashrooms import check_mashrooms
 from colab_app.front.front_diabet import check_diabet
 from colab_app.front.front_avocado import check_avocado
 from colab_app.front.front_telecom import check_telecom
+from colab_app.front.front_staff import check_staff
 
 with st.sidebar:
     name = st.radio('ML models:', ['Info', 'House', 'Student', 'Titanic', 'Bank',
-                                   'Mashrooms', 'Diabet', 'Avocado', 'Telecom'])
+                                   'Mashrooms', 'Diabet', 'Avocado', 'Telecom', 'Staff'])
 
 if name =='Info':
     st.title('Welcome')
@@ -28,6 +29,7 @@ if name =='Info':
     st.text('Avocado — предсказание зрелости авокадо')
     st.text('Mushroom — классификация грибов')
     st.text('Telecom — отток клиентов телеком')
+    st.text('Staff — отток сотрудников в компании')
 
 
 elif name == 'House':
@@ -54,4 +56,5 @@ elif name == 'Avocado':
 elif name == 'Telecom':
     check_telecom()
 
-
+elif name == 'Staff':
+    check_staff()

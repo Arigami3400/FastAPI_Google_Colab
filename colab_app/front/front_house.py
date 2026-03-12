@@ -11,7 +11,10 @@ def check_house():
     TotalBsmtSF = st.number_input("Площадь подвала", min_value=0, max_value=1000, step=1)
     FullBat = st.number_input("Количество ванных", min_value=0, max_value=10, step=1)
     OverallQual = st.slider("Качество", min_value=1, max_value=10)
-    Neighborhood = st.text_input("Район")
+    Neighborhood = st.selectbox('Район',
+                                ['Blueste', 'BrDale', 'CollgCr', 'Gilbert', 'Mitchel', 'NWAmes', 'OldTown', 'SawyerW',
+                                 'Timber', 'BrkSide', 'Crawfor', 'IDOTRR', 'NAmes', 'NoRidge', 'SWISU', 'Somerst',
+                                 'Veenker', 'ClearCr', 'Edwards', 'MeadowV', 'NPkVill', 'NridgHt', 'Sawyer', 'StoneBr'])
 
     house_data = {
         "GrLivArea": GrLivArea,

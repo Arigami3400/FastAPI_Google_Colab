@@ -1,5 +1,5 @@
 
-from colab_app.api import avocado, bank,diabet , house , mashrooms, student, titanic, telecom
+from colab_app.api import avocado, bank,diabet , house , mashrooms, student, titanic, telecom, dshremployee
 from fastapi import FastAPI
 import uvicorn
 
@@ -12,6 +12,8 @@ colab_app.include_router(mashrooms.mashrooms_router)
 colab_app.include_router(student.student_router)
 colab_app.include_router(titanic.titanic_router)
 colab_app.include_router(telecom.telecom_router)
+colab_app.include_router(dshremployee.work_router)
+
 
 
 if __name__ == '__main__':
